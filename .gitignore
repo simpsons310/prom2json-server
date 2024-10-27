@@ -1,0 +1,9 @@
+.vscode/*
+!.vscode/launch.json
+
+cmd/server/*.yaml
+cmd/server/*.yml
+
+build/*
+
+config.yaml

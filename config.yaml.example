@@ -1,0 +1,16 @@
+server:
+  port: 8080
+
+logging:
+  time_format: "2006-01-02T15:04:05Z07:00"
+  level: 0
+  json_format: false
+  with_caller: true
+
+metrics:
+  - handler_path: /metrics
+    url: http://localhost:9001/metrics
+    response_timeout: 10
+    tls_cert: ''
+    tls_key: ''
+    tls_insecure_verify: false

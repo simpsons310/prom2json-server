@@ -2,14 +2,6 @@
 
 An HTTP server converts Prometheus request pull metrics from plain text into JSON format based on [prom2json](https://github.com/prometheus/prom2json) tool
 
-## Introduction
-
-There are some agent tools that scrape metrics for Prometheus and expose API-returned metrics in a plain format, with HTTP requests returning responses as text/plain. However, sometimes we need HTTP requests to return responses in JSON format. In my case, when integrating `node_exporter` with [Grafana Alloy](https://grafana.com/docs/alloy/latest/), this was not possible because Alloy only accepts HTTP responses in JSON format.
-
-Fortunately, the Prometheus team provides a tool called [prom2json](https://github.com/prometheus/prom2json) to convert metrics data from plain text to JSON, but it can only be run as a command for each request.
-
-To address this, I created this application, which acts as an HTTP server to convert Prometheus metrics data retrieved from agents from plain text to JSON. I hope this helps someone! ٩(＾◡＾)۶
-
 ## Usage
 
 - Add configuration file
